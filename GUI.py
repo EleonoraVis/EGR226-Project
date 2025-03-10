@@ -21,7 +21,7 @@ from tkinter import *
 
 def function1(gotten_text):
     email_headers = []
-    #nltk.download('stopwords')
+    nltk.download('stopwords')
     dataset = pandas.read_csv('spam_ham_dataset.csv')
     dataset['text'] = dataset['text'].apply(lambda x: x.replace('\r\n', ' '))
     stemmer = PorterStemmer()
